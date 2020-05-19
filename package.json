@@ -1,0 +1,27 @@
+{
+  "name": "arm-todo",
+  "version": "0.0.1",
+  "description": "my to do app",
+  "author": "Andrew MacEachern",
+  "license": "MIT",
+  "main": "main.js",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "start": "electron -r dotenv/config ."
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "11.0.2",
+    "@rollup/plugin-node-resolve": "^7.0.0",
+    "dotenv": "^8.2.0",
+    "electron": "^9.0.0",
+    "electron-builder": "^22.6.1",
+    "electron-reload": "^1.5.0",
+    "rollup": "^1.20.0",
+    "rollup-plugin-livereload": "^1.0.0",
+    "rollup-plugin-svelte": "^5.0.3",
+    "rollup-plugin-terser": "^5.1.2",
+    "svelte": "^3.0.0"
+  },
+  "dependencies": {}
+}
