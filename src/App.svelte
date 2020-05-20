@@ -1,7 +1,13 @@
 <script>
 	// import * as $j from 'jquery';
-
+	import jQuery from 'jquery'
 	export let name;
+
+	let testFunc = () =>{
+		jQuery('#exampleModal').modal({
+			show: true
+		})
+	}
 </script>
 
 
@@ -29,7 +35,7 @@
 				<a class="dropdown-item" href="#">Another action</a>
 				<a class="dropdown-item" href="#">Something else here</a>
 				<div class="dropdown-divider"></div>
-				<a class="dropdown-item" href="#">Separated link</a>
+				<a on:click={testFunc} class="dropdown-item" href="#">Separated link</a>
 			</div>
 		</li>
 	</ul>
