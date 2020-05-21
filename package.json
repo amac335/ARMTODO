@@ -27,9 +27,9 @@
   },
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
+    "@jamen/svelte-router": "^0.4.0",
     "bootstrap": "^4.5.0",
     "jquery": "^3.5.1",
-    "svelte-popper": "^0.1.4",
-    "svelte-router": "^3.0.0-alpha.2"
+    "svelte-popper": "^0.1.4"
   }
 }

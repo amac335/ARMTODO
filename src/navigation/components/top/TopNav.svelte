@@ -1,5 +1,6 @@
 <script>
-import jQuery from 'jquery'
+  import { Link } from "@jamen/svelte-router"
+  import jQuery from 'jquery'
   import Icon from 'fa-svelte'
   import {
     faBars,
@@ -26,7 +27,7 @@ import jQuery from 'jquery'
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
     <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" on:click={tglSB}>
       <Icon icon={barsIcon}></Icon>
-    </button><a class="navbar-brand" href="index.html">{location}</a><!-- Navbar Search-->
+    </button><Link class="navbar-brand" href="/">{location}</Link> <!-- <a class="navbar-brand" href="/" use:link>{location}</a> Navbar Search-->
     <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
       <div class="input-group">
         <input class="form-control" type="text" placeholder="Search for..." aria-label="Search"
@@ -48,7 +49,8 @@ import jQuery from 'jquery'
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
           <a class="dropdown-item" href="#">Settings</a><a class="dropdown-item" href="#">Activity Log</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="login.html">Logout</a>
+          <Link href="task">Task</Link>
+          <!-- <a class="dropdown-item" href="task" use:link>Task</a> -->
         </div>
       </li>
       <li class="nav-item">
