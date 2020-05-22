@@ -1,101 +1,118 @@
-<h1>Enter a new Task</h1>
+<script>
 
-<form id="test-form">
-  <fieldset>
-    <legend>Legend</legend>
-    <div class="form-group row">
-      <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
-      <div class="col-sm-10">
-        <input type="text" readonly="" class="form-control-plaintext" id="staticEmail" value="email@example.com">
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="exampleInputEmail1">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-    </div>
-    <div class="form-group">
-      <label for="exampleInputPassword1">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-    </div>
-    <div class="form-group">
-      <label for="exampleSelect1">Example select</label>
-      <select class="form-control" id="exampleSelect1">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="exampleSelect2">Example multiple select</label>
-      <select multiple="" class="form-control" id="exampleSelect2">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="exampleTextarea">Example textarea</label>
-      <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
-    </div>
-    <div class="form-group">
-      <label for="exampleInputFile">File input</label>
-      <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
-      <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
-    </div>
-    <fieldset class="form-group">
-      <legend>Radio buttons</legend>
-      <div class="form-check">
-        <label class="form-check-label">
-          <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
-          Option one is this and that—be sure to include why it's great
-        </label>
-      </div>
-      <div class="form-check">
-      <label class="form-check-label">
-          <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
-          Option two can be something else and selecting it will deselect option one
-        </label>
-      </div>
-      <div class="form-check disabled">
-      <label class="form-check-label">
-          <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled="">
-          Option three is disabled
-        </label>
-      </div>
-    </fieldset>
-    <fieldset class="form-group">
-      <legend>Checkboxes</legend>
-      <div class="form-check">
-        <label class="form-check-label">
-          <input class="form-check-input" type="checkbox" value="" checked="">
-          Option one is this and that—be sure to include why it's great
-        </label>
-      </div>
-      <div class="form-check disabled">
-        <label class="form-check-label">
-          <input class="form-check-input" type="checkbox" value="" disabled="">
-          Option two is disabled
-        </label>
-      </div>
-    </fieldset>
-    <fieldset class="form-group">
-      <legend>Sliders</legend>
-      <label for="customRange1">Example range</label>
-      <input type="range" class="custom-range" id="customRange1">
-    </fieldset>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </fieldset>
-</form>
+
+const pseudoData = [
+    {
+        id: "db4ab272-202c-472a-94d6-2484e0b66fe8", //UUID
+        status: "", // complete, started, pending (waiting), on-going, archive
+        title: "T2s",
+        startDate: null,
+        dueDate: null,
+        completeDate: null,
+        repeating: false,
+        priority: 3, // priority scale 1 - 5 (1 being the lowest & 5 being the highest)
+        tags: [],
+        client: "TMG Tax Consulting",
+        project: "", //
+        memo: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus velit elit, a posuere leo ornare eget. Phasellus viverra in lacus vitae gravida. Maecenas nec tellus eros. Nam gravida massa id neque iaculis placerat id eget eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque pharetra, lorem quis finibus mollis, magna nisl interdum quam, vel blandit nunc est at libero. Phasellus sodales varius augue vel pulvinar. Cras sit amet aliquet leo, id mollis neque.",
+        subTasks: [],
+        relatedTasks:[],
+        relatedNotes: [],
+        billable: true,
+        timeline:[]
+    },
+    {
+        id: "69e62cdc-420b-45dc-834a-d7a3c6d1b2b9", 
+        status: "", 
+        title: "T1s",
+        startDate: null,
+        dueDate: null,
+        completeDate: null,
+        repeating: false,
+        priority: 3,
+        tags: [],
+        client: "TMG Tax Consulting",
+        project: "",
+        memo: "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In sed dolor libero. Aliquam rhoncus in erat id molestie. Etiam elit ante, pulvinar quis lacus sit amet, hendrerit dapibus tellus. Fusce a condimentum ex. Curabitur eget odio viverra, tincidunt libero sit amet, cursus dui. Mauris tincidunt venenatis erat sed mollis. Nam pellentesque elit in augue ultricies, ut imperdiet lorem iaculis.",
+        subTasks: [],
+        relatedTasks:[],
+        relatedNotes: [],
+        billable: true,
+        timeline:[]
+    },
+    {
+        id: "10e594e9-8a93-400c-9679-655ff3d435a3", 
+        status: "", 
+        title: "T2 Post Assessment Reviews",
+        startDate: null,
+        dueDate: null,
+        completeDate: null,
+        repeating: false,
+        priority: 3,
+        tags: [],
+        client: "TMG Tax Consulting",
+        project: "",
+        memo: "Aliquam nec ultrices dui. Phasellus a velit est. Etiam efficitur feugiat urna, vel bibendum arcu tincidunt nec. Vestibulum congue sapien in nibh pretium mattis. Mauris sodales quam non eleifend vestibulum. Phasellus sed facilisis risus. Nulla nunc enim, bibendum eu dui in, dignissim sodales eros. Nam interdum euismod metus pellentesque porta. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec lobortis urna eget velit ultrices, at lobortis ipsum tempor. Vivamus facilisis lacus ullamcorper, posuere purus eget, euismod nunc. Nam libero purus, mattis sit amet arcu sed, aliquet iaculis purus. Vestibulum eget arcu a lorem elementum ultrices. Mauris sapien ipsum, lacinia sit amet tincidunt nec, sagittis et risus. Aenean consequat nibh at tempus semper. Vestibulum lacinia tristique mauris nec condimentum.",
+        subTasks: [],
+        relatedTasks:[],
+        relatedNotes: [],
+        billable: true,
+        timeline:[]
+    },
+    {
+        id: "7bac337a-17be-4bb7-b655-0e0c87d85618", 
+        status: "", 
+        title: "T1 Post Assessment Reviews",
+        startDate: null,
+        dueDate: null,
+        completeDate: null,
+        repeating: false,
+        priority: 3,
+        tags: [],
+        client: "TMG Tax Consulting",
+        project: "",
+        memo: "Suspendisse tempor, arcu dictum porta pretium, dui dolor molestie odio, id semper nulla nunc sit amet urna. Nullam bibendum efficitur leo vitae posuere. Morbi sit amet purus varius, euismod lectus ut, condimentum velit. Duis ac gravida mi. Quisque sollicitudin iaculis euismod. Sed sit amet imperdiet lectus, ut volutpat ante. Cras posuere libero id dignissim convallis. Phasellus ut lorem ac elit dignissim sodales.",
+        subTasks: [],
+        relatedTasks:[],
+        relatedNotes: [],
+        billable: true,
+        timeline:[]
+        
+    },
+
+    
+]
+
+</script>
+
+<div class="container-fluid">
+
+    <h1>Tasks</h1>
+    <ul class="list-group mb-5">
+
+        {#each pseudoData as task, i}
+        <li href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+                <h4 class="mb-1">{task.title}</h4>
+                <!-- <small>Due {task.dueDate}</small> -->
+                <span class="badge badge-primary">Due {task.dueDate}</span>
+            </div>
+            <p class="mt-2 mb-1">{task.memo.substring(0,150)} {#if task.memo.length > 150} ...MORE >>{/if}</p>
+            <small>Sub-tasks: {task.subTasks.length} || Client: Client: {task.client} || Project: {task.project}</small> <br>
+            <small>[{task.id}-{i}]</small> 
+        </li>  
+        {/each}
+    <!-- <a href="#" class="list-group-item list-group-item-action active">
+        Cras justo odio
+    </a>
+    <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in
+    </a>
+    <a href="#" class="list-group-item list-group-item-action disabled">Morbi leo risus
+    </a> -->
+    </ul>
+</div>
+
 
 <style>
-#test-form{
-    max-width: 900px;
-    margin: auto;
-    padding: 10px;
-}
+
 </style>
