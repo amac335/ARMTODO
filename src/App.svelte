@@ -1,4 +1,5 @@
 <script>
+    import { fakeTaskList } from './store/store.js'
     import Nav from "./navigation/Nav.svelte"
     import { Router } from "@jamen/svelte-router";
     import DashboardSample from "./samples/DashboardSample.svelte"
