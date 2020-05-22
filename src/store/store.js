@@ -1,5 +1,60 @@
 import { writable } from 'svelte/store'
 
+export const statusList = writable(
+    [
+        {
+            val: "completed",
+            display: "Completed"
+        },
+        {
+            val: "started",
+            display: "Started"
+        },
+        {
+            val: "pending",
+            display: "Pending"
+        },
+        {
+            val: "ongoing",
+            display: "Ongoing"
+        },
+        {
+            val: "archive",
+            display: "Archive"
+        },
+    ]
+)
+
+export const priorityList = writable(
+    [
+        {
+            val: 5,
+            display: "Priority",
+            contextColour: "danger"
+        },
+        {
+            val: 4,
+            display: "High",
+            contextColour: "warning"
+        },
+        {
+            val: 3,
+            display: "Medium",
+            contextColour: "info"
+        },
+        {
+            val: 2,
+            display: "Medium-Low",
+            contextColour: "primary"
+        },
+        {
+            val: 1,
+            display: "Low",
+            contextColour: "secondary"
+        },
+    ]
+)
+
 export const fakeTaskList = writable(
     [
         {
@@ -77,7 +132,6 @@ export const fakeTaskList = writable(
             relatedNotes: [],
             billable: true,
             timeline:[]
-            
         },   
     ]
 )

@@ -44,19 +44,20 @@
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">
-          <Icon icon={userIcon}></Icon>
+          <Icon icon={plusIcon}></Icon>
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-          <a class="dropdown-item" href="#">Settings</a><a class="dropdown-item" href="#">Activity Log</a>
+          <Link class="dropdown-item" href="task-list">Task</Link>
+          <a class="dropdown-item" href="#">Project</a>
+          <a class="dropdown-item" href="#">Client</a>
           <div class="dropdown-divider"></div>
-          <Link href="task">Task</Link>
-          <!-- <a class="dropdown-item" href="task" use:link>Task</a> -->
+          <a class="dropdown-item" href="#">Tag</a>
         </div>
       </li>
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a href="#" class="nav-link" role="button">
           <Icon icon={plusIcon}></Icon>
         </a>
-      </li>
+      </li> -->
     </ul>
   </nav>

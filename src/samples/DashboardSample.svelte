@@ -1,18 +1,18 @@
 <script>
-import Icon from 'fa-svelte'
-  import {
-    
-    faChartArea,
-    faChartBar,
-    faAngleRight,
-    faTable
-  } from '@fortawesome/free-solid-svg-icons/'
+    import { Link } from "@jamen/svelte-router"
+    import Icon from 'fa-svelte'
+    import {
 
-let chartAreaIcon = faChartArea
-let chartBarIcon = faChartBar
-let angleRightIcon = faAngleRight
-let tableIcon = faTable
+        faChartArea,
+        faChartBar,
+        faAngleRight,
+        faTable
+    } from '@fortawesome/free-solid-svg-icons/'
 
+    let chartAreaIcon = faChartArea
+    let chartBarIcon = faChartBar
+    let angleRightIcon = faAngleRight
+    let tableIcon = faTable
 </script>
 
 <div class="container-fluid pt-3">
@@ -32,7 +32,7 @@ let tableIcon = faTable
             <div class="card bg-warning text-white mb-4">
                 <div class="card-body">Upcoming</div>
                 <div class="card-footer d-flex align-items-center justify-content-between">
-                    <a class="small text-white stretched-link" href="#">View Details</a>
+                    <Link class="small text-white stretched-link" href="/task-list">View Details</Link>
                     <div class="small text-white">
                         <Icon icon={angleRightIcon}></Icon>
                     </div>
