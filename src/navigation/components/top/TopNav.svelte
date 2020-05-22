@@ -47,7 +47,7 @@
           <Icon icon={plusIcon}></Icon>
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-          <Link class="dropdown-item" href="task-list">Task</Link>
+          <Link class="dropdown-item" href="task-form">Task</Link>
           <a class="dropdown-item" href="#">Project</a>
           <a class="dropdown-item" href="#">Client</a>
           <div class="dropdown-divider"></div>

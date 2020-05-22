@@ -8,7 +8,8 @@
         faChartBar,
         faAngleDown,
         faAngleRight,
-        faTable
+        faTable,
+        faCogs
     } from '@fortawesome/free-solid-svg-icons/'
 
     let tachometerAltIcon = faTachometerAlt
@@ -19,6 +20,7 @@
     let angleDownIcon = faAngleDown
     let angleRightIcon = faAngleRight
     let tableIcon = faTable
+    let CogsIcon = faCogs
 </script>
 
 <div id="layoutSidenav_nav">
@@ -99,9 +101,10 @@
                 </a>
             </div>
         </div>
-        <div class="sb-sidenav-footer">
-            <div class="small">Logged in as:</div>
-            Start Bootstrap
+        <div class="sb-sidenav-footer py-4">
+             <Icon class="mr-1"  icon={CogsIcon}></Icon> Settings
+            <!-- <div class="small">Setting</div> -->
+            <!-- Start Bootstrap -->
         </div>
     </nav>
 </div>

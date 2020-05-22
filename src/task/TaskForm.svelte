@@ -1,101 +1,147 @@
-<h1>Enter a new Task</h1>
+<script>
 
-<form id="test-form">
+</script>
+.
+<form id="task-form">
   <fieldset>
-    <legend>Legend</legend>
-    <div class="form-group row">
-      <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
-      <div class="col-sm-10">
-        <input type="text" readonly="" class="form-control-plaintext" id="staticEmail" value="email@example.com">
+    <legend>Enter a New Task</legend>
+    <div class="row">
+      <div class="col-8">
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input type="text" class="form-control" id="title" placeholder="Give your task a title...">
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="form-group">
+          <label for="priority">Priority</label>
+          <input type="range" class="custom-range" id="priority">
+        </div>
       </div>
     </div>
-    <div class="form-group">
-      <label for="exampleInputEmail1">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-    </div>
-    <div class="form-group">
-      <label for="exampleInputPassword1">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-    </div>
-    <div class="form-group">
-      <label for="exampleSelect1">Example select</label>
-      <select class="form-control" id="exampleSelect1">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="exampleSelect2">Example multiple select</label>
-      <select multiple="" class="form-control" id="exampleSelect2">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="exampleTextarea">Example textarea</label>
-      <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
-    </div>
-    <div class="form-group">
-      <label for="exampleInputFile">File input</label>
-      <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
-      <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
-    </div>
-    <fieldset class="form-group">
-      <legend>Radio buttons</legend>
-      <div class="form-check">
-        <label class="form-check-label">
-          <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
-          Option one is this and that—be sure to include why it's great
-        </label>
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="dueDate">Due Date</label>
+          <input type="date" class="form-control" id="dueDate">
+        </div>
       </div>
-      <div class="form-check">
-      <label class="form-check-label">
-          <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
-          Option two can be something else and selecting it will deselect option one
-        </label>
+      <div class="col">
+        <div class="form-group">
+          <label for="completeDate">Complete Date</label>
+          <input type="date" class="form-control" id="completeDate">
+        </div>
       </div>
-      <div class="form-check disabled">
-      <label class="form-check-label">
-          <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled="">
-          Option three is disabled
-        </label>
+      <div class="col">
+        <div class="form-group">
+          <label for="startDate">Start Date</label>
+          <input type="date" class="form-control" id="startDate">
+        </div>
       </div>
-    </fieldset>
-    <fieldset class="form-group">
-      <legend>Checkboxes</legend>
-      <div class="form-check">
-        <label class="form-check-label">
-          <input class="form-check-input" type="checkbox" value="" checked="">
-          Option one is this and that—be sure to include why it's great
-        </label>
+      <div class="col">
+        <div class="form-group">
+          <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="repeating">
+            <label class="custom-control-label" for="repeating">Repeating</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="custom-control custom-switch">
+            <input type="checkbox" class="custom-control-input" id="billable">
+            <label class="custom-control-label" for="billable">Billable</label>
+          </div>
+        </div>
       </div>
-      <div class="form-check disabled">
-        <label class="form-check-label">
-          <input class="form-check-input" type="checkbox" value="" disabled="">
-          Option two is disabled
-        </label>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="project">Project</label>
+          <select multiple="" class="form-control" id="project">
+            <option>To Do App</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
       </div>
-    </fieldset>
-    <fieldset class="form-group">
-      <legend>Sliders</legend>
-      <label for="customRange1">Example range</label>
-      <input type="range" class="custom-range" id="customRange1">
-    </fieldset>
-    <button type="submit" class="btn btn-primary">Submit</button>
+      <div class="col">
+        <div class="form-group">
+          <label for="client">Client</label>
+          <select multiple="" class="form-control" id="client">
+            <option>Personal</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="memo">Memo</label>
+      <textarea class="form-control" id="memo" rows="15"></textarea>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="project">Sub-tasks</label>
+          <select multiple="" class="form-control" id="project">
+            <option>To Do App</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <label for="tags">Tags</label>
+          <select multiple="" class="form-control" id="tags">
+            <option>Personal</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <label for="relatedNotes">Notes</label>
+          <select multiple="" class="form-control" id="relatedNotes">
+            <option>Personal</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <label for="relatedTasks">Related Tasks</label>
+          <select multiple="" class="form-control" id="relatedTasks">
+            <option>Personal</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Add</button>
   </fieldset>
 </form>
 
 <style>
-#test-form{
+  #task-form {
     max-width: 900px;
     margin: auto;
     padding: 10px;
-}
+  }
 </style>
