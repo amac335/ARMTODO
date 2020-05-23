@@ -15,7 +15,7 @@
       <div class="col-4">
         <div class="form-group">
           <label for="priority">Priority</label>
-          <input type="range" class="custom-range" id="priority">
+          <input type="range" min="1" max="5" step="1" value="3" class="custom-range" id="priority">
         </div>
       </div>
     </div>
