@@ -1,4 +1,6 @@
 import { writable } from 'svelte/store'
+import clientList from './clientStore'
+
 
 export const statusList = writable(
     [

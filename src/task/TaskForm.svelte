@@ -1,7 +1,7 @@
 <script>
 
 </script>
-.
+
 <form id="task-form">
   <fieldset>
     <legend>Enter a New Task</legend>
