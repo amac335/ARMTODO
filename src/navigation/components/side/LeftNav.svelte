@@ -1,4 +1,5 @@
 <script>
+    import { Link } from "@jamen/svelte-router"
     import Icon from 'fa-svelte'
     import {
         faTachometerAlt,
@@ -88,12 +89,13 @@
                     </nav>
                 </div>
                 <div class="sb-sidenav-menu-heading">Addons</div>
-                <a class="nav-link" href="charts.html">
+                <Link class="nav-link" href="tags">
                     <div class="sb-nav-link-icon">
                         <Icon icon={chartAreaIcon}></Icon>
                     </div>
                     Tags
-                </a><a class="nav-link" href="tables.html">
+                </Link>
+                <a class="nav-link" href="tags">
                     <div class="sb-nav-link-icon">
                         <Icon icon={tableIcon}></Icon>
                     </div>

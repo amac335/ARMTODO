@@ -6,12 +6,14 @@
     import Task from "./task/Task.svelte";
     import TaskForm from "./task/TaskForm.svelte";
     import TaskList from "./task/TaskList.svelte";
+    import TagList from "./tag/Tags.svelte";
 
     const routes = {
         "/": DashboardSample,
         "/task": Task,
         "/task-list": TaskList,
         "/task-form": TaskForm,
+        "/tags": TagList,
     }
     
 </script>
