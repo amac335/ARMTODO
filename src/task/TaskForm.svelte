@@ -1,4 +1,11 @@
 <script>
+import { onMount } from 'svelte'
+import { currentScreen } from '../store/store'
+onMount( () => {
+    currentScreen.set('Task Form')
+  } )
+
+
 
 </script>
 

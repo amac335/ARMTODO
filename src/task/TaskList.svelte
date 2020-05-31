@@ -1,6 +1,10 @@
 <script>
 
-import { fakeTaskList } from '../store/store.js'
+import { fakeTaskList, currentScreen } from '../store/store.js'
+import { onMount } from 'svelte'
+onMount( () => {
+    currentScreen.set('Task List')
+  } )
 
 </script>
 

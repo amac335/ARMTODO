@@ -1,5 +1,8 @@
 <script>
     import { Link } from "@jamen/svelte-router"
+    import { currentScreen } from '../store/store.js'
+    import { onMount } from 'svelte'
+
     import Icon from 'fa-svelte'
     import {
 
@@ -8,7 +11,9 @@
         faAngleRight,
         faTable
     } from '@fortawesome/free-solid-svg-icons/'
-
+    onMount( () => {
+    currentScreen.set('Dashboard')
+  } )
     let chartAreaIcon = faChartArea
     let chartBarIcon = faChartBar
     let angleRightIcon = faAngleRight

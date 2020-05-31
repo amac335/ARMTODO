@@ -1,5 +1,6 @@
 <script>
   import { Link } from "@jamen/svelte-router"
+  import { currentScreen } from '../../../store/store'
   import jQuery from 'jquery'
   import Icon from 'fa-svelte'
   import {
@@ -14,8 +15,6 @@
   let searchIcon = faSearch
   let plusIcon = faPlus
 
-  // export let name;
-  let location = 'Dashboard'
   // Toggle the side navigation
   let tglSB = () => {
     jQuery("body").toggleClass("sb-sidenav-toggled");
@@ -27,7 +26,7 @@
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
     <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" on:click={tglSB}>
       <Icon icon={barsIcon}></Icon>
-    </button><Link class="navbar-brand" href="/">{location}</Link> <!-- <a class="navbar-brand" href="/" use:link>{location}</a> Navbar Search-->
+    </button><Link class="navbar-brand" href="/">{$currentScreen}</Link> <!-- <a class="navbar-brand" href="/" use:link>{location}</a> Navbar Search-->
     <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
       <div class="input-group">
         <input class="form-control" type="text" placeholder="Search for..." aria-label="Search"

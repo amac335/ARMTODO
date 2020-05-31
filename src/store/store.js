@@ -1,6 +1,7 @@
 import { writable } from 'svelte/store'
-import clientList from './clientStore'
+// import clientList from './clientStore'
 
+export const currentScreen = writable('Dashboard')
 
 export const statusList = writable(
     [

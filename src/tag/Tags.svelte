@@ -1,4 +1,10 @@
 <script>
+import { currentScreen } from '../store/store.js'
+import { onMount } from 'svelte'
+onMount( () => {
+    currentScreen.set('Tags')
+  } )
+
 let tagList = []
 let startInput
 let newTag = {
