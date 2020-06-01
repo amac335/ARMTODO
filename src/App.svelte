@@ -1,5 +1,5 @@
 <script>
-    import { fakeTaskList } from './store/store.js'
+    import { taskList } from './store/store.js'
     import Nav from "./navigation/Nav.svelte"
     import { Router } from "@jamen/svelte-router";
     import DashboardSample from "./samples/DashboardSample.svelte"
@@ -7,13 +7,16 @@
     import TaskForm from "./task/TaskForm.svelte";
     import TaskList from "./task/TaskList.svelte";
     import TagList from "./tag/Tags.svelte";
+    import Lost from "./samples/Lost.svelte";
 
     const routes = {
         "/": DashboardSample,
         "/task": Task,
         "/task-list": TaskList,
+        "#/task-list-item": TaskList, //this passes a query string
         "/task-form": TaskForm,
         "/tags": TagList,
+        404: Lost
     }
     
 </script>

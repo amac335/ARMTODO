@@ -1,5 +1,5 @@
 <script>
-    import { Link } from "@jamen/svelte-router"
+    import { Link, router } from "@jamen/svelte-router"
     import { currentScreen } from '../store/store.js'
     import { onMount } from 'svelte'
 
@@ -18,6 +18,7 @@
     let chartBarIcon = faChartBar
     let angleRightIcon = faAngleRight
     let tableIcon = faTable
+
 </script>
 
 <div class="container-fluid pt-3">
@@ -26,7 +27,7 @@
             <div class="card bg-primary text-white mb-4">
                 <div class="card-body">Today</div>
                 <div class="card-footer d-flex align-items-center justify-content-between">
-                    <a class="small text-white stretched-link" href="#">View Details</a>
+                    <Link class="small text-white stretched-link" href="/task-list-item?name=today">View Details</Link>
                     <div class="small text-white">
                         <Icon icon={angleRightIcon}></Icon>
                     </div>

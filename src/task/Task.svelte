@@ -1,6 +1,6 @@
 <script>
 
-import { fakeTaskList } from '../store/store.js'
+import { taskList } from '../store/store.js'
 
 </script>
 
@@ -9,7 +9,7 @@ import { fakeTaskList } from '../store/store.js'
     <h1>Tasks</h1>
     <ul class="list-group mb-5">
 
-        {#each $fakeTaskList as task, i}
+        {#each $taskList as task, i}
         <li href="#" class="list-group-item list-group-item-action flex-column align-items-start">
             <div class="d-flex w-100 justify-content-between">
                 <h4 class="mb-1">{task.title}</h4>
