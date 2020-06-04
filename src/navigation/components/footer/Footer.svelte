@@ -5,7 +5,7 @@ copyRightYear = copyRightYear.getFullYear()
 
 </script>
 
-<footer class="py-4 bg-light text-dark mt-auto">
+<footer class="py-4 bg-secondary text-dark mt-auto">
     <div class="container-fluid">
         <div class="d-flex align-items-center justify-content-between small">
             <div class="text-muted">Copyright &copy; Syn R G Consulting Inc. {copyRightYear}</div>
