@@ -95,12 +95,12 @@
                     </div>
                     Tags
                 </Link>
-                <a class="nav-link" href="tags">
+                <Link class="nav-link" href="projects">
                     <div class="sb-nav-link-icon">
                         <Icon icon={tableIcon}></Icon>
                     </div>
-                    Tables
-                </a>
+                    Projects
+                </Link>
             </div>
         </div>
         <div class="sb-sidenav-footer py-4">

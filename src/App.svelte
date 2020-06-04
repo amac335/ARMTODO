@@ -7,6 +7,7 @@
     import TaskForm from "./task/TaskForm.svelte";
     import TaskList from "./task/TaskList.svelte";
     import TagList from "./tag/Tags.svelte";
+    import ProjectList from "./project/Projects.svelte";
     import Lost from "./samples/Lost.svelte";
 
     const routes = {
@@ -16,6 +17,7 @@
         "#/task-list-item": TaskList, //this passes a query string
         "/task-form": TaskForm,
         "/tags": TagList,
+        "/projects": ProjectList,
         404: Lost
     }
     
