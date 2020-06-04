@@ -9,7 +9,7 @@ onMount( () => {
 
 </script>
 
-<form id="task-form">
+<form id="task-form" class="mt-3 p-4 shadow-lg bg-secondary rounded">
   <fieldset>
     <legend>Enter a New Task</legend>
     <div class="row">

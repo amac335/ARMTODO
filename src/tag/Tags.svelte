@@ -30,7 +30,7 @@ const sanitizeSlug = (slugText) => {
 
 
 <div class="container">
-    <form id="tagForm" on:submit|preventDefault={addTag} class="mb-5 mt-3">
+    <form id="tagForm" on:submit|preventDefault={addTag} class="mb-3 mt-3 p-4 shadow-lg bg-secondary rounded">
         <legend>Enter a New Tag</legend>
         <div class="row">
             <div class="col">
@@ -60,7 +60,7 @@ const sanitizeSlug = (slugText) => {
 
              {#each tagList as tag, i}
 
-                <li class="list-group-item d-flex justify-content-between align-items-center">
+                <li class="list-group-item d-flex justify-content-between align-items-center mb-1 shadow">
                      <span class="badge badge-success badge-pill text-dark">{tag.slug}</span><span class="mr-4 text-info">{tag.description}</span> 
                     <span class="badge badge-primary badge-pill">{i}</span>
                 </li>
